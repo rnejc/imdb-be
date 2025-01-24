@@ -1,5 +1,6 @@
 import {
   IsDateString,
+  IsNotEmpty,
   IsNumber,
   IsOptional,
   IsString,
@@ -22,4 +23,7 @@ export class UpdateMovieDto {
   @Min(1)
   @Max(10)
   rating?: number;
+  @IsNumber()
+  @IsNotEmpty()
+  genre_id?: number;
 }
